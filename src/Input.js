@@ -76,6 +76,7 @@ class Input extends Component {
       children,
       className,
       labelClassName,
+      divClassName,
       defaultValue,
       error,
       label,
@@ -142,7 +143,7 @@ class Input extends Component {
       ));
 
       return (
-        <div className={cx(classes)}>
+        <div className={cx(classes, divClassName)}>
           {htmlLabel}
           <select
             {...other}
@@ -161,7 +162,7 @@ class Input extends Component {
       delete other.options;
 
       return (
-        <div className={cx(classes)}>
+        <div className={cx(classes, divClassName)}>
           <C
             {...other}
             className={cx(className, inputClasses)}
@@ -195,7 +196,7 @@ class Input extends Component {
         : defaultValue;
 
       return (
-        <div className={cx(classes)}>
+        <div className={cx(classes, divClassName)}>
           { this.renderIcon() }
           <C
             {...other}
@@ -241,6 +242,7 @@ Input.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   labelClassName: PropTypes.string,
+  divClassName: PropTypes.string,
   label: PropTypes.node,
   error: PropTypes.string,
   success: PropTypes.string,
