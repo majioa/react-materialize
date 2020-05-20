@@ -63,7 +63,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "react": "^15.6.2",
     "react-dom": "^15.6.2"
   }
